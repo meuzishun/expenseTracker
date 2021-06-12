@@ -1,0 +1,40 @@
+* {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	width: 90%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+}
+
+header {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	text-align: center;
+}
+
+main {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+}
+
+/* form {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto;
+} */
+
+table {
+	width: 100%;
+	text-align: left;
+}
+
+/* section {
+	display: grid;
+	justify-self: center;
+} */

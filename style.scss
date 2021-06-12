@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+
+    header {
+        height: 15vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        h1 {
+            font-weight: normal;
+            font-size: 4rem;
+        }
+        
+        h2 {
+            font-weight: normal;
+            color: rgb(0, 128, 36);
+        }
+    }
+
+    main {
+        width: 75%;
+        margin: 0 auto;
+
+        form#input-form {
+            padding: 1rem;
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas: 
+            'name name'
+            'date amount'
+            'submit submit';
+
+            .form-group {
+                display: flex;
+                gap: 0.5rem;
+
+                label, input {
+                    font-size: 1.3rem;
+                }
+
+                input {
+                    flex-grow: 1;
+                }
+            }
+
+            .form-name {
+                grid-area: name;
+            }
+
+            .form-date {
+                grid-area: date;
+            }
+
+            .form-amount {
+                grid-area: amount;
+            }
+
+            .buttons {
+                grid-area: submit;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                #submit {
+                    font-size: 1.3rem;
+                    padding: 0.5rem;
+                    background-color: green;
+                    color: white;
+                    border: none;
+                    border-radius: 0.3rem;
+                }
+            }
+        }
+
+        table#summary {
+            width: 100%;
+            border-collapse: collapse;
+
+            th {
+                padding: 0.5rem;
+                text-align: left;
+            }
+
+            td {
+                padding: 0.5rem;
+                border: 1px solid black;
+
+                &:last-child {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
