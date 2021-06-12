@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <script src="script.js" defer></script> -->
-    <script src="script2.js" defer></script>
+    <script src="script.js" defer></script>
+    <!-- <script src="script2.js" defer></script> -->
 </head>
 <body>
     <header>
@@ -25,7 +25,7 @@
             </div>
             <div class="form-group form-amount">
                 <label for="amount">Amount:</label>
-                <input type="text" name="amount" id="amount">
+                <input type="number" step="0.01" name="amount" id="amount">
             </div>
             <div class="buttons">
                 <button type="submit" id="submit">Add Expense</button>
@@ -43,7 +43,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <!-- <tr>
                     <td>Test Name 1</td>
                     <td>Oct 1 2020</td>
                     <td>$15.99</td>
@@ -60,7 +60,7 @@
                     <td>Oct 1 2020</td>
                     <td>$15.99</td>
                     <td><button>X</button></td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
     </main>

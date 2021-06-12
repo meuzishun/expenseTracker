@@ -1,4 +1,4 @@
-const form = document.querySelector('#form');
+const form = document.querySelector('#input-form');
 const inputName = document.querySelector('#name');
 const inputDate = document.querySelector('#date');
 const inputAmount = document.querySelector('#amount');
@@ -9,6 +9,13 @@ function clearInput() {
     inputName.value = '';
     inputDate.value = '';
     inputAmount.value = '';
+    inputName.focus();
+}
+
+function formatAmount(amount) {
+    amount = +amount;
+    let realAmount = amount.toFixed(2);
+    return `$${realAmount}`;
 }
 
 function getData() {
@@ -22,7 +29,7 @@ function getData() {
 }
 
 function removeItem(evt) {
-    evt.target.parentElement.remove();
+    evt.target.parentElement.parentElement.remove();
 }
 
 function createTableRow(data) {
@@ -35,18 +42,18 @@ function createTableRow(data) {
     tableDate.innerHTML = data.date;
     
     let tableAmount = document.createElement('td');
-    tableAmount.innerHTML = data.amount;
+    tableAmount.innerHTML = formatAmount(data.amount);
 
-    let deleteRow = document.createElement('td');
+    let deleteContainer = document.createElement('td');
     let deleteBtn = document.createElement('button');
     deleteBtn.innerHTML = 'X';
     deleteBtn.addEventListener('click', removeItem);
-    deleteRow.appendChild(deleteBtn);
+    deleteContainer.appendChild(deleteBtn);
 
     tableRow.appendChild(tableName);
     tableRow.appendChild(tableDate);
     tableRow.appendChild(tableAmount);
-    tableRow.appendChild(deleteBtn);
+    tableRow.appendChild(deleteContainer);
 
     return tableRow;
 }
